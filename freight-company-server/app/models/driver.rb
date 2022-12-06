@@ -9,4 +9,11 @@ class Driver < ActiveRecord::Base
       driver.update(img_url: images.pop)
     end
   end
+
+  def driver_loads
+    Load.all.filter do |load|
+      load.driver_id == self.id
+    end
+  end
+  
 end
