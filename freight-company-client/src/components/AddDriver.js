@@ -45,4 +45,31 @@ function AddDriver({ addDriver }) {
     })  
   }
 
+  return (
+    <div className="form-style-8">
+      <h2>Add a new driver</h2>
+      <h3>Fill out the form below to add a new driver</h3>
+      <form onSubmit={handleSubmit}>  
+        <input type="text" name="name" placeholder="Full Name" value={formData.name} onChange={handleChange}/>
+        <input type="number" name="age" placeholder="Age" value={formData.age} onChange={handleChange}/>
+        <input type="number" name="years_of_experience" placeholder="Years of Experience" value={formData.years_of_experience} onChange={handleChange}/>
+        <input type="number" name="accidents" placeholder="Accidents" value={formData.accidents} onChange={handleChange}/>
+        <input type="text" name="img_url" 
+        placeholder="Profile Picture (URL)" value={formData.img_url} onChange={handleChange}/>
+        <select value={formData.dl_class} name="dl_class" onChange={handleChange}>
+          <option value="none">Driver's License Class</option>
+          <option value="A">Class A</option>
+          <option value="B">Class B</option>
+          <option value="C">Class C</option>
+        </select>
+        <br></br>
+        <button id="button" type="submit">Submit</button>
+        <br></br>
+        <p className="submitted">{submitted}</p>
+        <p className="submitted">{checkDriver}</p>
+      </form>
+    </div>
+  )
 }
+
+export default AddDriver;
