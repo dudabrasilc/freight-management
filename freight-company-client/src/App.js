@@ -49,4 +49,13 @@ function App() {
     const newTruckArray=[...trucks, newTruck]
     setLoads(newTruckArray)
   }
+
+  function toggle() {
+    let nav = document.getElementById("myTopnav");
+    if (nav.className === "topnav") {
+      nav.className += " responsive";
+    } else {
+      nav.className = "topnav";
+    }
+  }
 }
