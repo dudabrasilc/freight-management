@@ -9,6 +9,9 @@ import AddLoad from './components/AddLoad';
 import AddTruck from './components/AddTruck';
 
 function App() {
+  const [drivers, setDrivers] = useState([])
+  const [loads, setLoads] = useState([])
+  const [trucks, setTrucks] = useState([])
 
   useEffect(() => {
     fetch(`http://localhost:9292/Drivers`)
