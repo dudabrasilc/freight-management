@@ -58,4 +58,26 @@ function App() {
       nav.className = "topnav";
     }
   }
+  return (
+    <div className="App">
+      <BrowserRouter>   
+      <div className="topnav" id="myTopnav">
+      <NavLink activeClassName="active" exact to="/">Home</NavLink>
+      <NavLink activeClassName="active" exact to="/Loads">Loads</NavLink>
+      <NavLink activeClassName="active" exact to="/Drivers">Drivers</NavLink>
+      <div className="dropdown">
+        <button className="dropbtn">New
+          <i className="fa fa-caret-down"></i>
+        </button>
+        <div className="dropdown-content">
+          <NavLink activeClassName="active" exact to="/AddLoad">Load</NavLink>
+          <NavLink activeClassName="active" exact to="/AddTruck">Truck</NavLink>
+          <NavLink activeClassName="active" exact to="/AddDriver">Driver</NavLink>
+        </div>
+      </div>
+      <a className="icon" onClick={toggle}></a>
+    </div>
+      </BrowserRouter>
+    </div>
+  )
 }
