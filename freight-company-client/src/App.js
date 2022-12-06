@@ -58,6 +58,8 @@ function App() {
       nav.className = "topnav";
     }
   }
+
+  // Debug
   return (
     <div className="App">
       <BrowserRouter>   
