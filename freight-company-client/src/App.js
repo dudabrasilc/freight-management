@@ -32,4 +32,21 @@ function App() {
     })
   }, [])
 
+  function addDriver(newDriver) {
+    console.log(newDriver)
+    const newDriversArray=[...drivers, newDriver]
+    setDrivers(newDriversArray)
+  }
+
+  function addLoad(newLoad) {
+    console.log(newLoad)
+    const newLoadArray=[...loads, newLoad]
+    setLoads(newLoadArray)
+  }
+
+  function addTruck(newTruck) {
+    console.log(newTruck)
+    const newTruckArray=[...trucks, newTruck]
+    setLoads(newTruckArray)
+  }
 }
