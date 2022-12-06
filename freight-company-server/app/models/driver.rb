@@ -15,5 +15,9 @@ class Driver < ActiveRecord::Base
       load.driver_id == self.id
     end
   end
-  
+
+  def driver_trucks
+    self.trucks
+  end
+
 end
