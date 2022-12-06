@@ -1,7 +1,12 @@
 import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './index.css';
-
+import Home from './components/Home';
+import LoadsPage from './components/LoadsPage';
+import DriversPage from './components/DriversPage';
+import AddDriver from './components/AddDriver';
+import AddLoad from './components/AddLoad';
+import AddTruck from './components/AddTruck';
 
 function App() {
 
