@@ -59,7 +59,6 @@ function App() {
     }
   }
 
-  // Debug
   return (
     <div className="App">
       <BrowserRouter>   
@@ -79,6 +78,26 @@ function App() {
       </div>
       <a className="icon" onClick={toggle}></a>
     </div>
+    <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Loads">
+            <LoadsPage loads={loads}/>
+          </Route>
+          <Route path="/Drivers">
+            <DriversPage drivers={drivers} setDrivers={setDrivers} onUpdateDriver={onUpdateDriver}/>
+          </Route>
+          <Route path="/AddDriver">
+            <AddDriver addDriver={addDriver}/>
+          </Route>
+          <Route path="/AddLoad">
+            <AddLoad addLoad={addLoad}/>
+          </Route>
+          <Route path="/AddTruck">
+            <AddTruck addTruck={addTruck}/>
+          </Route>
+        </Switch>
       </BrowserRouter>
     </div>
   )
