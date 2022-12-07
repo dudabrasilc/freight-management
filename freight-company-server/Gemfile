@@ -5,3 +5,5 @@ gem "sinatra", "~> 2.1"
 gem "thin", "~> 1.8"
 
 gem "rack-contrib", "~> 2.3"
+
+gem "rack-cors", "~> 1.1"
