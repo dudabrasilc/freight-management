@@ -17,5 +17,6 @@ function DriverCard({ name, img_url, id, onRemoveDriver }) {
       <button className="card-btn delete" onClick={handleDelete}>Remove</button>
     </div>
   )
-
 }
+
+export default DriverCard;
