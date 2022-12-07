@@ -28,3 +28,5 @@ function DriversList({ drivers, setDrivers }) {
     </>
   )
 }
+
+export default DriversList;
