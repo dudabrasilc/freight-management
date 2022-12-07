@@ -10,4 +10,12 @@ function DriverCard({ name, img_url, id, onRemoveDriver }) {
     });
   }
 
+  return (
+    <div className="card">
+      <img src={img_url} alt={"driver picture"} />
+      <h3 className="driver-name">{name}</h3>
+      <button className="card-btn delete" onClick={handleDelete}>Remove</button>
+    </div>
+  )
+
 }
