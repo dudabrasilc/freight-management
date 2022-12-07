@@ -79,4 +79,17 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
   
   const handleShowTrucks = () => setShowTrucks(showTrucks => !showTrucks)
 
+  let matchedObj = matched[0]
+
+  if (!matchedObj) {
+    return (
+      <>
+        <br></br>
+        <br></br>
+        <br></br>
+        <h1>Driver was removed successfully.</h1>
+        <h3>To go back, navigate to the Drivers tab.</h3>
+      </>
+    )
+  }
 }
