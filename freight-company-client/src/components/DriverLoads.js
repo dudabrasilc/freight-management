@@ -26,3 +26,5 @@ function DriverLoads({ driverLoads }) {
     </div>
   )
 }
+
+export default DriverLoads;
