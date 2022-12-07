@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Route, Switch } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import './index.css';
+import './index.css'
+import './App.css';
 import Home from './components/Home';
 import LoadsPage from './components/LoadsPage';
 import DriversPage from './components/DriversPage';
@@ -40,6 +41,7 @@ function App() {
     })
   }, [])
 
+
   function addDriver(newDriver) {
     console.log(newDriver)
     const newDriversArray=[...drivers, newDriver]
@@ -67,6 +69,17 @@ function App() {
     }
   }
 
+  function onUpdateDriver(updatedDriver) {
+    const updatedDrivers = drivers.map((driver) => {
+      if (driver.id === updatedDriver.id) {
+        return updatedDriver;
+      } else {
+        return driver;
+      }
+    });
+    setDrivers(updatedDrivers);
+  }
+
   return (
     <div className="App">
       <BrowserRouter>   
@@ -86,7 +99,7 @@ function App() {
       </div>
       <a className="icon" onClick={toggle}></a>
     </div>
-    <Switch>
+        <Switch>
           <Route exact path="/">
             <Home />
           </Route>
@@ -110,3 +123,5 @@ function App() {
     </div>
   )
 }
+
+export default App;

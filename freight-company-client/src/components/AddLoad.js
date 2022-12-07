@@ -48,7 +48,7 @@ function AddLoad({ addLoad }) {
       setCheckLoad("To check it, navigate to the Loads tab.")
     })  
   }
-  
+    
   return (
     <div className="form-style-8">
       <h2>Add a new load</h2>
@@ -71,3 +71,5 @@ function AddLoad({ addLoad }) {
     </div>
   )
 }
+
+export default AddLoad;

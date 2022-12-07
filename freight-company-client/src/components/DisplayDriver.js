@@ -1,13 +1,15 @@
-import { useParams, useRouteMatch } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import { useRouteMatch } from "react-router-dom";
 import DriverLoads from './DriverLoads';
 import DriverTrucks from './DriverTrucks';
 
+
 function DisplayDriver({ drivers, onUpdateDriver }) {
-  const [driverLoads, setDriverLoads] = useState([])
-  const [driverTrucks, setDriverTrucks] = useState([])
   const [drugTestPassed, setDrugTestPassed] = useState(false)
   const [drivingRecord, setDrivingRecord] = useState(false)
+  const [driverLoads, setDriverLoads] = useState([])
+  const [driverTrucks, setDriverTrucks] = useState([])
   const [showResults, setShowResults] = useState(false)
   const [showTrucks, setShowTrucks] = useState(false)
 
@@ -36,6 +38,7 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
       console.log(trucks)
     })
   }, [])
+
 
   function handleDrugTest() {
     setDrugTestPassed(drugTestPassed => !drugTestPassed)
@@ -79,6 +82,7 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
   
   const handleShowTrucks = () => setShowTrucks(showTrucks => !showTrucks)
 
+
   let matchedObj = matched[0]
 
   if (!matchedObj) {
@@ -91,8 +95,7 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
         <h3>To go back, navigate to the Drivers tab.</h3>
       </>
     )
-  }
-  else {
+  } else {
     return (
       <div className="display">
         <img className="image-display" src={matched[0].img_url} alt="image" />
@@ -103,13 +106,13 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
         <p>Driver's License Class: {matched[0].dl_class}</p>
         <hr></hr>
         <div>
-          <input type="submit" className="" value={showResults ? "Hide Loads" : "Display loads" } onClick={handleShow} />
-          { showResults ? <DriverLoads driverLoads={driverLoads}/> : null }
+            <input type="submit" className="" value={showResults ? "Hide Loads" : "Display loads" } onClick={handleShow} />
+            { showResults ? <DriverLoads driverLoads={driverLoads}/> : null }
         </div>
         <hr></hr>
         <div>
-          <input type="submit" className="" value={showTrucks ? "Hide Trucks" : "Display Trucks" } onClick={handleShowTrucks} />
-          { showTrucks ? <DriverTrucks driverTrucks={driverTrucks}/> : null }
+            <input type="submit" className="" value={showTrucks ? "Hide Trucks" : "Display Trucks" } onClick={handleShowTrucks} />
+            { showTrucks ? <DriverTrucks driverTrucks={driverTrucks}/> : null }
         </div>
         <hr></hr>
         <p> Check the box below if the driver passed on the drug test.</p>
@@ -120,3 +123,5 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
     )
   }
 }
+
+export default DisplayDriver;

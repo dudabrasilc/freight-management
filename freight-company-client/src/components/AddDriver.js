@@ -44,7 +44,7 @@ function AddDriver({ addDriver }) {
       setCheckDriver("To check it, navigate to the Drivers tab.")
     })  
   }
-
+    
   return (
     <div className="form-style-8">
       <h2>Add a new driver</h2>

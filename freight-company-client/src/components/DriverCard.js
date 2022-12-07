@@ -1,4 +1,4 @@
-function DriverCard({ name, img_url, id, onRemoveDriver }) {
+function DriverCard({ name, img_url, id, onRemoveDriver }) { 
 
   function handleDelete() {
     fetch(`http://localhost:9292/Drivers/${id}`, {
@@ -18,5 +18,5 @@ function DriverCard({ name, img_url, id, onRemoveDriver }) {
     </div>
   )
 }
-
+  
 export default DriverCard;

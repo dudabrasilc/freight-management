@@ -17,14 +17,15 @@ function DriverLoads({ driverLoads }) {
     )
   })
 
-  return (
-    <div>
-      <h2>Loads:</h2>
-      <ul>
-        {loadsList}
-      </ul>
-    </div>
-  )
+    return (
+      <div>
+        <h2>Loads:</h2>
+        <ul>
+          {loadsList}
+        </ul>
+      </div>
+    )
+  
 }
 
 export default DriverLoads;

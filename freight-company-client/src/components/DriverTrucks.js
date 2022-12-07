@@ -20,6 +20,7 @@ function DriverTrucks({ driverTrucks}) {
       </ul>
     </div>
   )
+  
 }
 
 export default DriverTrucks;

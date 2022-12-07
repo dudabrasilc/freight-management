@@ -3,7 +3,6 @@ import DriversList from "./DriversList.js";
 import DisplayDriver from "./DisplayDriver.js";
 import DriverLoads from "./DriverLoads.js";
 
-
 function DriversPage({ drivers, setDrivers, onUpdateDriver }) {
   const match = useRouteMatch()
 

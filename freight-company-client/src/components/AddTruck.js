@@ -42,7 +42,7 @@ function AddTruck({ addTruck }) {
       setCheckTruck("To check it, navigate to the Trucks tab.")
     })  
   }
-
+    
   return (
     <div className="form-style-8">
       <h2>Add a new truck</h2>
