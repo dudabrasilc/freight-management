@@ -17,5 +17,14 @@ function DriversList({ drivers, setDrivers }) {
       </li>
     )
   })
-
+  
+  return (
+    <>
+      <br></br>
+      <h2 className="header-list">For more information about a driver click on the avatar.</h2>
+      <ul className="cards">
+        {driversArray}
+      </ul>
+    </>
+  )
 }
