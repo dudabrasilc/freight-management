@@ -62,3 +62,5 @@ function AddTruck({ addTruck }) {
     </div>
   )
 }
+
+export default AddTruck;
