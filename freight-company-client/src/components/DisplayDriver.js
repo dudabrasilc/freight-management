@@ -74,4 +74,9 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
       // onUpdateDriver(updated)
     });
   }
+
+  const handleShow = () => setShowResults(showResults => !showResults)
+  
+  const handleShowTrucks = () => setShowTrucks(showTrucks => !showTrucks)
+
 }
