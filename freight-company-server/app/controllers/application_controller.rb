@@ -37,5 +37,10 @@ class ApplicationController < Sinatra::Base
     load.load_driver.to_json
   end
 
+  get "/Trucks" do
+    trucks = Truck.all
+    trucks.to_json
+  end
+
 
 end
