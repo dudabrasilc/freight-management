@@ -21,3 +21,5 @@ function DriversPage({ drivers, setDrivers, onUpdateDriver }) {
     </Switch>
   )
 }
+
+export default DriversPage;
