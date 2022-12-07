@@ -12,4 +12,14 @@ function DriverTrucks({ driverTrucks}) {
     )
   })
 
+  return (
+    <div>
+      <h2>Trucks:</h2>
+      <ul>
+        {trucksList}
+      </ul>
+    </div>
+  )
 }
+
+export default DriverTrucks;
