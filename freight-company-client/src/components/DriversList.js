@@ -7,5 +7,15 @@ function DriversList({ drivers, setDrivers }) {
     const updatedDriversList = drivers.filter((driver) => driver.id !== removedDriver.id);
     setDrivers(updatedDriversList);
   }
-  
+
+  const driversArray = drivers.map(driver => {
+    return (
+      <li key={driver.id}>
+        <Link to={`Drivers/${driver.id}`}>
+          <DriverCard onRemoveDriver={handleRemoveDriver} name={driver.name} id= {driver.id} img_url={driver.img_url}/>
+        </Link>
+      </li>
+    )
+  })
+
 }
