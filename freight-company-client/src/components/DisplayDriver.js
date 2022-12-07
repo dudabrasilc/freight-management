@@ -36,4 +36,42 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
       console.log(trucks)
     })
   }, [])
+
+  function handleDrugTest() {
+    setDrugTestPassed(drugTestPassed => !drugTestPassed)
+    // console.log(matched[0])
+    fetch(`http://localhost:9292/Drivers/${matched[0].id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      passed_drug_test: !drugTestPassed
+    })
+  })
+    .then((r) => r.json())
+    .then((updated) => {
+      console.log(updated)
+      // onUpdateDriver(updated)
+    });
+  }
+
+  function handleDrivingRecord() {
+    setDrivingRecord(drivingRecord => !drivingRecord)
+
+    fetch(`http://localhost:9292/Drivers/${matched[0].id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      clean_driving_record: !drivingRecord
+    })
+  })
+    .then((r) => r.json())
+    .then((updated) => {
+      console.log(updated)
+      // onUpdateDriver(updated)
+    });
+  }
 }
