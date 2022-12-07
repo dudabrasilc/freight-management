@@ -30,3 +30,17 @@ end
   )
 
 end
+
+15.times do
+
+  Truck.create(
+    truck_model: ["Volvo", "Freightliner", "Peterbilt", "International"].shuffle.first,
+    truck_color: Faker::Vehicle.color,
+    license_plate: Faker::Vehicle.license_plate,
+    mileage: Faker::Vehicle.mileage,
+    vin_number: Faker::Vehicle.vin
+  )
+
+end
+
+puts "✅ Done seeding!"
