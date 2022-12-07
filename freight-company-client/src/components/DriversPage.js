@@ -12,5 +12,12 @@ function DriversPage({ drivers, setDrivers, onUpdateDriver }) {
       <Route exact path='/Drivers'>
         <DriversList drivers={ drivers } setDrivers={setDrivers} />
       </Route>
-      </Switch>
-)}
+      <Route exact path={`${match.url}/:id`}>
+        <DisplayDriver drivers={ drivers } onUpdateDriver={onUpdateDriver}/>
+      </Route>
+      <Route path={`${match.url}/:id/Loads`}>
+        <DriverLoads drivers={drivers}/>
+      </Route>
+    </Switch>
+  )
+}
