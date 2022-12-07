@@ -13,5 +13,18 @@ class ApplicationController < Sinatra::Base
     driver.to_json
   end
 
+  get "/Drivers/:id/Loads" do
+    # binding.pry
+    driver = Driver.find(params[:id])
+    loads = driver.driver_loads
+    loads.to_json
+  end
+
+  get "/Drivers/:id/Trucks" do
+    # binding.pry
+    driver = Driver.find(params[:id])
+    trucks = driver.driver_trucks
+    trucks.to_json
+  end
 
 end
