@@ -27,4 +27,15 @@ class ApplicationController < Sinatra::Base
     trucks.to_json
   end
 
+  get "/Loads" do
+    loads = Load.all
+    loads.to_json
+  end
+
+  get "/Loads/:id" do
+    load = Load.all.find(params[:id])
+    load.load_driver.to_json
+  end
+
+
 end
