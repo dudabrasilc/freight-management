@@ -19,5 +19,21 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
     return Number(params.id) === driver.id
   })
 
+  useEffect(() => {
+    fetch(`http://localhost:9292/${match.url}/Loads`)
+    .then(r => r.json())
+    .then(loads => {
+      setDriverLoads(loads)
+      console.log(loads)
+    })
+  }, [])
 
+  useEffect(() => {
+    fetch(`http://localhost:9292/${match.url}/Trucks`)
+    .then(r => r.json())
+    .then(trucks => {
+      setDriverTrucks(trucks)
+      console.log(trucks)
+    })
+  }, [])
 }
