@@ -16,4 +16,13 @@ function DriverLoads({ driverLoads }) {
         </li>  
     )
   })
+
+  return (
+    <div>
+      <h2>Loads:</h2>
+      <ul>
+        {loadsList}
+      </ul>
+    </div>
+  )
 }
