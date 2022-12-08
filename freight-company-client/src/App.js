@@ -8,6 +8,7 @@ import DriversPage from './components/DriversPage';
 import AddDriver from './components/AddDriver';
 import AddLoad from './components/AddLoad';
 import AddTruck from './components/AddTruck';
+import TrucksPage from './components/TrucksPage';
 
 function App() {
   const [drivers, setDrivers] = useState([])
@@ -60,6 +61,13 @@ function App() {
     setLoads(newTruckArray)
   }
 
+  function deleteLoad(id) {
+    let updatedLoadList = loads.filter(load => {
+      return load.id != id
+    })
+    setLoads(updatedLoadList)
+  }
+
   function toggle() {
     let nav = document.getElementById("myTopnav");
     if (nav.className === "topnav") {
@@ -86,6 +94,7 @@ function App() {
       <div className="topnav" id="myTopnav">
       <NavLink activeClassName="active" exact to="/">Home</NavLink>
       <NavLink activeClassName="active" exact to="/Loads">Loads</NavLink>
+      <NavLink activeClassName="active" exact to="/Trucks">Trucks</NavLink>
       <NavLink activeClassName="active" exact to="/Drivers">Drivers</NavLink>
       <div className="dropdown">
         <button className="dropbtn">New
@@ -104,7 +113,10 @@ function App() {
             <Home />
           </Route>
           <Route path="/Loads">
-            <LoadsPage loads={loads}/>
+            <LoadsPage loads={loads} deleteLoad={deleteLoad}/>
+          </Route>
+          <Route path="/Trucks">
+            <TrucksPage trucks={trucks}/>
           </Route>
           <Route path="/Drivers">
             <DriversPage drivers={drivers} setDrivers={setDrivers} onUpdateDriver={onUpdateDriver}/>
