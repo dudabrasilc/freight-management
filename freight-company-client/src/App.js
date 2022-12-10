@@ -113,7 +113,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/Loads">
-            <LoadsPage loads={loads} deleteLoad={deleteLoad} handleDelivered={handleDelivered}/>
+            <LoadsPage loads={loads} deleteLoad={deleteLoad} handleDelivered={handleDelivered} drivers={drivers} trucks={trucks}/>
           </Route>
           <Route path="/Trucks">
             <TrucksPage trucks={trucks}/>

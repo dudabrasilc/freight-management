@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-function Load({ load, deleteLoad, handleDelivered}) {
+function Load({ load, deleteLoad, handleDelivered, drivers, trucks }) {
   const [delivered, setDelivered] = useState(load.delivered)
 
   function handleDelete() {
@@ -32,14 +32,19 @@ function Load({ load, deleteLoad, handleDelivered}) {
     });
   }
 
+  const matchedDriver = drivers.filter(driver => {
+    return driver.id === load.driver_id
+  })
+  
+  const matchedTruck = trucks.filter(truck => {
+    return truck.id === load.truck_id
+  })
+
   return (
     <div>
       <h2>Load #{load.id}</h2>
       <p>‣ Check the box below if the load was delivered:</p>
       <button className="selected" onClick={clickDelivered}>{delivered ? "☑️" : "☐"}</button>
-      <Link to={`Drivers/${load.driver_id}`}>
-        <p>Click to see the driver for this load</p>
-      </Link>
       <p><b>‣ Pickup Address:</b> {load.pickup_address}</p>
       <p><b>‣ Dropoff Address:</b> {load.dropoff_address}</p>
       <p><b>‣ Pickup Date:</b> {load.pickup_date}</p>
@@ -48,8 +53,11 @@ function Load({ load, deleteLoad, handleDelivered}) {
       <p><b>‣ Dropoff Time: </b> {load.dropoff_time}</p>
       <p><b>‣ Weight:</b> {load.weight}</p>
       <p><b>‣ Rate: </b> {load.rate}</p>
-      <p><b>‣ Driver Identification Number: </b> {load.driver_id}</p>
-      <p><b>‣ Truck Identification Number: </b> {load.truck_id}</p>
+      <p><b>‣ Driver: </b> {matchedDriver[0].name}</p>
+      <Link to={`Drivers/${load.driver_id}`}>
+        <p>Click to see the driver for this load</p>
+      </Link>
+      <p><b>‣ Truck: </b> {matchedTruck[0].truck_color} {matchedTruck[0].truck_model}</p>
       <button className="button medium regular white" onClick={handleDelete}>Remove Load</button>
       <hr></hr>
     </div>

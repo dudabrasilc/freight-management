@@ -69,8 +69,7 @@ function AddLoad({ addLoad, drivers, trucks }) {
   return (
     <div className="form-style-8">
       <h2>Add a new load</h2>
-      <h3>Fill out the form below to add a new load</h3>
-      <h5>Note: For the last two fields, please refer to the Trucks and Drivers page to find the identification numbers. If you want to assign a load to a driver or truck that doesn't exist in the database, please create it first.</h5>
+      <h4>Fill out the form below to add a new load</h4>
       <form onSubmit={handleSubmit}>
         <input type="text" name="pickup_address" placeholder="Pickup Address" value={formData.pickup_address} onChange={handleChange}/>
         <input type="text" name="dropoff_address" placeholder="Dropoff Address" value={formData.dropoff_address} onChange={handleChange}/>
