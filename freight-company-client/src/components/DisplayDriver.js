@@ -14,7 +14,6 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
   console.log(matched)
 
   const match = useRouteMatch()
-  // console.log(match)
 
   const [driverLoads, setDriverLoads] = useState([])
   const [driverTrucks, setDriverTrucks] = useState([])
@@ -25,8 +24,7 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
     fetch(`http://localhost:9292/${match.url}/Loads`)
     .then(r => r.json())
     .then(loads => {
-      setDriverLoads(loads)
-      console.log(loads)
+      setDriverLoads(loads)    
     })
   }, [])
 
@@ -34,25 +32,25 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
     fetch(`http://localhost:9292/${match.url}/Trucks`)
     .then(r => r.json())
     .then(trucks => {
-      setDriverTrucks(trucks)
-      console.log(trucks)
+      const unique = [...new Map(trucks.map(v => [v.id, v])).values()]
+      setDriverTrucks(unique)
     })
   }, [])
 
   const handleShow = () => setShowResults(showResults => !showResults)
   
-  const handleShowTrucks = () => setShowTrucks(showTrucks => !showTrucks)
+  function handleShowTrucks() {
+    setShowTrucks(showTrucks => !showTrucks)
+    let unique = driverTrucks.filter((item, i, ar) => ar.indexOf(item) === i);
+    setDriverTrucks(unique)
+  }
 
   let matchedObj = matched[0]
 
   if (!matchedObj) {
     return (
       <>
-        <br></br>
-        <br></br>
-        <br></br>
-        <h1>Driver was removed successfully.</h1>
-        <h3>To go back, navigate to the Drivers tab.</h3>
+        <p>Loading...</p>
       </>
     )
   } else {

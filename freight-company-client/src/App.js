@@ -58,7 +58,7 @@ function App() {
   function addTruck(newTruck) {
     console.log(newTruck)
     const newTruckArray=[...trucks, newTruck]
-    setLoads(newTruckArray)
+    setTrucks(newTruckArray)
   }
 
   function deleteLoad(id) {

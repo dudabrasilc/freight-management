@@ -3,7 +3,7 @@ function DriverLoads({ driverLoads }) {
   const loadsList = driverLoads.map(load => {
     return (
       <li key={load.id}>
-        <h3>Load Number #{load.id}</h3>
+        <h3>Load #{load.id}</h3>
         <p> ‣ Pickup Address: {load.pickup_address}</p>
         <p> ‣ Dropoff Address: {load.dropoff_address}</p>
         <p> ‣ Pickup Date: {load.pickup_date}</p>
@@ -11,7 +11,7 @@ function DriverLoads({ driverLoads }) {
         <p> ‣ Pickup Time: {load.pickup_time}</p>
         <p> ‣ Dropoff Time: {load.dropoff_time}</p>
         <p> ‣ Weight: {load.weight}</p>
-        <p> ‣ Rate: {load.rate}</p>     
+        <p> ‣ Rate: {load.rate}</p>
       </li>
     )
   })

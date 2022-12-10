@@ -29,7 +29,6 @@ function AddTruck({ addTruck }) {
     })
     .then(resp => resp.json())
     .then(newTruck => {
-      console.log(newTruck)
       setFormData({
         truck_model: "",
         truck_color: "",
@@ -49,8 +48,8 @@ function AddTruck({ addTruck }) {
       <h3>Fill out the form below to add a new truck</h3>
       <form onSubmit={handleSubmit}>
         <input type="text" name="truck_model" placeholder="Truck Model" value={formData.truck_model} onChange={handleChange}/>
-        <input type="number" name="truck_color" placeholder="Truck Color" value={formData.truck_color} onChange={handleChange}/>
-        <input type="number" name="license_plate" placeholder="License Plate" value={formData.license_plate} onChange={handleChange}/>
+        <input type="text" name="truck_color" placeholder="Truck Color" value={formData.truck_color} onChange={handleChange}/>
+        <input type="text" name="license_plate" placeholder="License Plate" value={formData.license_plate} onChange={handleChange}/>
         <input type="number" name="mileage" placeholder="Mileage" value={formData.mileage} onChange={handleChange}/>
         <input type="text" name="vin_number" 
         placeholder="Vin Number" value={formData.vin_number} onChange={handleChange}/>

@@ -91,4 +91,10 @@ class ApplicationController < Sinatra::Base
     truck.to_json
   end
 
+  delete '/Trucks/:id' do
+    truck = Truck.find(params[:id])
+    truck.destroy
+    truck.to_json
+  end
+
 end
