@@ -8,8 +8,6 @@ puts "🌱 Seeding spices..."
     years_of_experience: rand(0..20),
     accidents: rand(0..5),
     dl_class: ("A".."C").to_a.sample,
-    passed_drug_test: [true, false].shuffle.first,
-    clean_driving_record: [true, false].shuffle.first
   )
 
 end
@@ -26,7 +24,8 @@ end
     weight: "#{rand(0..48000)} lbs",
     rate: "$#{rand(1500..8000)}",
     driver_id: rand(1..10),
-    truck_id: rand(1..15)
+    truck_id: rand(1..15),
+    delivered: false
   )
 
 end

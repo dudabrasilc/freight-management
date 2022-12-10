@@ -9,6 +9,7 @@ class CreateLoads < ActiveRecord::Migration[6.1]
       t.string :dropoff_time
       t.string :weight
       t.string :rate
+      t.boolean :delivered
     end
   end
 end

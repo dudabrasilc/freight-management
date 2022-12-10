@@ -77,15 +77,15 @@ function App() {
     }
   }
 
-  function onUpdateDriver(updatedDriver) {
-    const updatedDrivers = drivers.map((driver) => {
-      if (driver.id === updatedDriver.id) {
-        return updatedDriver;
+  function handleDelivered(updatedLoad) {
+    const updatedLoads = loads.map((load) => {
+      if (load.id === updatedLoad.id) {
+        return updatedLoad;
       } else {
-        return driver;
+        return load;
       }
     });
-    setDrivers(updatedDrivers);
+    setLoads(updatedLoads);
   }
 
   return (
@@ -113,13 +113,13 @@ function App() {
             <Home />
           </Route>
           <Route path="/Loads">
-            <LoadsPage loads={loads} deleteLoad={deleteLoad}/>
+            <LoadsPage loads={loads} deleteLoad={deleteLoad} handleDelivered={handleDelivered}/>
           </Route>
           <Route path="/Trucks">
             <TrucksPage trucks={trucks}/>
           </Route>
           <Route path="/Drivers">
-            <DriversPage drivers={drivers} setDrivers={setDrivers} onUpdateDriver={onUpdateDriver}/>
+            <DriversPage drivers={drivers} setDrivers={setDrivers}/>
           </Route>
           <Route path="/AddDriver">
             <AddDriver addDriver={addDriver}/>

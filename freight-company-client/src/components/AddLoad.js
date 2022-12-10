@@ -9,16 +9,19 @@ function AddLoad({ addLoad }) {
     pickup_time: "",
     dropoff_time: "",
     weight: "",
-    rate: ""
+    rate: "",
+    driver_id: "",
+    truck_id: ""
   })
   const [loadSubmitted, setLoadSubmitted] = useState("")
   const [checkLoad, setCheckLoad] = useState("")
 
   const handleChange = (e) => {
+    console.log(e.target.type)
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
+      [e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
+    });
   }
 
   const handleSubmit = (e) => {
@@ -41,7 +44,9 @@ function AddLoad({ addLoad }) {
         pickup_time: "",
         dropoff_time: "",
         weight: "",
-        rate: ""
+        rate: "",
+        driver_id: "",
+        truck_id: ""
       })
       addLoad(newLoad)
       setLoadSubmitted("The load was added to the system.")
@@ -53,6 +58,7 @@ function AddLoad({ addLoad }) {
     <div className="form-style-8">
       <h2>Add a new load</h2>
       <h3>Fill out the form below to add a new load</h3>
+      <h5>Note: For the last two fields, please refer to the Trucks and Drivers page to find the identification numbers. If you want to assign a load to a driver or truck that doesn't exist in the database, please create it first.</h5>
       <form onSubmit={handleSubmit}>
         <input type="text" name="pickup_address" placeholder="Pickup Address" value={formData.pickup_address} onChange={handleChange}/>
         <input type="text" name="dropoff_address" placeholder="Dropoff Address" value={formData.dropoff_address} onChange={handleChange}/>
@@ -62,6 +68,8 @@ function AddLoad({ addLoad }) {
         <input type="text" name="dropoff_time" placeholder="Dropoff Time" value={formData.dropoff_time} onChange={handleChange}/>
         <input type="text" name="weight" placeholder="Weight" value={formData.weight} onChange={handleChange}/>
         <input type="text" name="rate" placeholder="Rate" value={formData.rate} onChange={handleChange}/>
+        <input type="number" name="truck_id" placeholder="Truck Identification Number" value={formData.truck_id} onChange={handleChange}/>
+        <input type="number" name="driver_id" placeholder="Driver Identification Number" value={formData.driver_id} onChange={handleChange}/>
         <br></br>
         <button id="button" type="submit">Submit</button>
         <br></br>

@@ -9,7 +9,7 @@ function DriversPage({ drivers, setDrivers, onUpdateDriver }) {
   return (
     <Switch>
       <Route exact path='/Drivers'>
-        <DriversList drivers={ drivers } setDrivers={setDrivers} />
+        <DriversList drivers={ drivers } setDrivers={setDrivers}/>
       </Route>
       <Route exact path={`${match.url}/:id`}>
         <DisplayDriver drivers={ drivers } onUpdateDriver={onUpdateDriver}/>

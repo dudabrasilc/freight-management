@@ -7,8 +7,6 @@ class CreateDrivers < ActiveRecord::Migration[6.1]
       t.integer :accidents
       t.string :dl_class
       t.string :img_url
-      t.boolean :passed_drug_test
-      t.boolean :clean_driving_record
     end
   end
 end

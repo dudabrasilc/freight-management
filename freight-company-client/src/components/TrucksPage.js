@@ -7,15 +7,13 @@ function TrucksPage({ trucks }) {
   const trucksList = trucks.map(truck => {
     return (
       <li key={truck.id}>
-        <h3>Truck Number #{truck.id}</h3>
-        {/* <Link to={`Drivers/${load.driver_id}`}>
-          <p>Click to see the driver for this load</p>
-        </Link> */}
-        <p> ‣ Truck Model: {truck.truck_model}</p>
-        <p> ‣ Truck Color: {truck.truck_color}</p>
-        <p> ‣ License Plate: {truck.license_plate}</p>
-        <p> ‣ Mileage: {truck.mileage}</p>
-        <p> ‣ Vin Number: {truck.vin_number}</p>
+        <h2>Truck #{truck.id}</h2>
+        <p><b>‣ Truck Identification Number:</b> {truck.id}</p>
+        <p><b>‣ Truck Model: </b> {truck.truck_model}</p>
+        <p><b>‣ Truck Color: </b> {truck.truck_color}</p>
+        <p><b>‣ License Plate: </b> {truck.license_plate}</p>
+        <p><b>‣ Mileage: </b> {truck.mileage}</p>
+        <p><b>‣ Vin Number:</b>  {truck.vin_number}</p>
       </li>  
     )
   })

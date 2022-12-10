@@ -19,8 +19,6 @@ ActiveRecord::Schema.define(version: 2022_12_07_080721) do
     t.integer "accidents"
     t.string "dl_class"
     t.string "img_url"
-    t.boolean "passed_drug_test"
-    t.boolean "clean_driving_record"
   end
 
   create_table "loads", force: :cascade do |t|
@@ -32,6 +30,7 @@ ActiveRecord::Schema.define(version: 2022_12_07_080721) do
     t.string "dropoff_time"
     t.string "weight"
     t.string "rate"
+    t.boolean "delivered"
     t.integer "driver_id"
     t.integer "truck_id"
   end

@@ -10,21 +10,21 @@ function DriversList({ drivers, setDrivers }) {
 
   const driversArray = drivers.map(driver => {
     return (
-      <li key={driver.id}>
+      <div key={driver.id}>
         <Link to={`Drivers/${driver.id}`}>
-          <DriverCard onRemoveDriver={handleRemoveDriver} name={driver.name} id= {driver.id} img_url={driver.img_url}/>
+          <DriverCard name={driver.name} id= {driver.id} img_url={driver.img_url}/>
         </Link>
-      </li>
+      </div>
     )
   })
 
   return (
     <>
       <br></br>
-      <h2 className="header-list">For more information about a driver click on the avatar.</h2>
-      <ul className="cards">
+      <h2 className="header-list">For more information about a driver and to check the driver's loads/trucks, click on the avatar.</h2>
+      <div className='cards'>
         {driversArray}
-      </ul>
+      </div>
     </>
   )
 }
