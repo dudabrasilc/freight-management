@@ -43,7 +43,7 @@ function Load({ load, deleteLoad, handleDelivered, drivers, trucks }) {
   return (
     <div>
       <h2>Load #{load.id}</h2>
-      <p>‣ Check the box below if the load was delivered:</p>
+      <p><b>‣ Check the box below if the load was delivered:</b></p>
       <button className="selected" onClick={clickDelivered}>{delivered ? "☑️" : "☐"}</button>
       <p><b>‣ Pickup Address:</b> {load.pickup_address}</p>
       <p><b>‣ Dropoff Address:</b> {load.dropoff_address}</p>
