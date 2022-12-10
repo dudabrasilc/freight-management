@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function AddLoad({ addLoad }) {
+function AddLoad({ addLoad, drivers, trucks }) {
   const [formData, setFormData] = useState({
     pickup_address: "",
     dropoff_address: "",
@@ -53,6 +53,18 @@ function AddLoad({ addLoad }) {
       setCheckLoad("To check it, navigate to the Loads tab.")
     })  
   }
+
+  const driversList = drivers.map(driver => {
+    return (
+      <option key={driver.id} name="driver_id" value={driver.id}>{driver.name}</option>
+    )
+  })
+
+  const trucksList = trucks.map(truck => {
+    return (
+      <option key={truck.id} name="truck_id" value={truck.id}>{truck.truck_color} {truck.truck_model}</option>
+    )
+  })
     
   return (
     <div className="form-style-8">
@@ -68,8 +80,14 @@ function AddLoad({ addLoad }) {
         <input type="text" name="dropoff_time" placeholder="Dropoff Time" value={formData.dropoff_time} onChange={handleChange}/>
         <input type="text" name="weight" placeholder="Weight" value={formData.weight} onChange={handleChange}/>
         <input type="text" name="rate" placeholder="Rate" value={formData.rate} onChange={handleChange}/>
-        <input type="number" name="truck_id" placeholder="Truck Identification Number" value={formData.truck_id} onChange={handleChange}/>
-        <input type="number" name="driver_id" placeholder="Driver Identification Number" value={formData.driver_id} onChange={handleChange}/>
+        <select value={formData.driver_id} name="driver_id" onChange={handleChange}>
+          <option value="none">Select a Driver</option>
+          {driversList}
+        </select>
+        <select value={formData.truck_id} name="truck_id" onChange={handleChange}>
+          <option value="none">Select a Truck</option>
+          {trucksList}
+        </select>
         <br></br>
         <button id="button" type="submit">Submit</button>
         <br></br>

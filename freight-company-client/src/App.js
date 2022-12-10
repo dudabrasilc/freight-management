@@ -125,7 +125,7 @@ function App() {
             <AddDriver addDriver={addDriver}/>
           </Route>
           <Route path="/AddLoad">
-            <AddLoad addLoad={addLoad}/>
+            <AddLoad addLoad={addLoad} drivers={drivers} trucks={trucks}/>
           </Route>
           <Route path="/AddTruck">
             <AddTruck addTruck={addTruck}/>

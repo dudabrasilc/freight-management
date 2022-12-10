@@ -61,7 +61,6 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
         <img className="image-display" src={matched[0].img_url} alt="image" />
 
         <h2>{matched[0].name}</h2>
-        <p>Driver Identification number: {matched[0].id}</p>
         <p>Age: {matched[0].age}</p>
         <p>Years of Experience: {matched[0].years_of_experience}</p>
         <p>Accidents: {matched[0].accidents}</p>
