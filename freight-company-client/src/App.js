@@ -20,7 +20,6 @@ function App() {
     .then(r => r.json())
     .then(driversData => {
       setDrivers(driversData)
-      console.log(driversData)
     })
   }, [])
 
@@ -29,7 +28,6 @@ function App() {
     .then(r => r.json())
     .then(loadsData => {
       setLoads(loadsData)
-      console.log(loadsData)
     })
   }, [])
 
@@ -38,7 +36,6 @@ function App() {
     .then(r => r.json())
     .then(trucksData => {
       setTrucks(trucksData)
-      console.log(trucksData)
     })
   }, [])
 
