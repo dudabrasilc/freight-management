@@ -10,9 +10,8 @@ Created with:
 
 
 
-# Freight Company
-
-
+# Freight Management
+This application consists of a front end in connect to a back end
 
 ## 
 
