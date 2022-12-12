@@ -13,6 +13,10 @@ ADD
 # Freight Management
 This application consists of a web API built with Sinatra and Active Record in connection with a React frontend.
 
+# File Structure
+
+<img alt='file-structure' src='./readme-files/file-structure.png' />  
+
 # Getting Started
 Follow the steps below to set up both front-end and back-end code.
 
@@ -57,12 +61,7 @@ In case you wish to migrate the tables with some sample data, just run the follo
 
 The database tables communicate with eachother through a one-to-many table association relationship, represented below:
 
-<img alt="table-association" src='./readme-files/table-association.png' />
-
-# File Structure
-
-<img alt='file-structure' src='./readme-files/file-structure.png' />
-
+<img alt="table-association" src='./readme-files/table-association.png' />  
 
 # Navigating
 To navigate through the application, you will be using the navbar.
