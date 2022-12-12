@@ -62,11 +62,16 @@ Also, you can click on the name of a load's driver to be redirected to the drive
 ![](./readme-files/loads-page.gif)
 
 ## Trucks and Drivers tabs
+The trucks and drivers sections display a list of trucks and drivers. The drivers tab also allow you to click on a driver to check its loads and trucks.
+
+![](./readme-files/trucks-drivers.gif)
+
 
 ## New tab
+On the new tab you have a dropdown list options that takes you to different forms to add a load, driver or a truck.
 
-### Contribute
+![](./readme-files/add-new.gif)
 
-## Support
+# Support
 For any questions related to the project's functionality, code, or usage, please reach out to:  
 brasildu@gmail.com
