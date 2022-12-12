@@ -10,37 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_07_080721) do
-
-  create_table "drivers", force: :cascade do |t|
-    t.string "name"
-    t.integer "age"
-    t.integer "years_of_experience"
-    t.integer "accidents"
-    t.string "dl_class"
-    t.string "img_url"
-  end
-
-  create_table "loads", force: :cascade do |t|
-    t.string "pickup_address"
-    t.string "dropoff_address"
-    t.string "pickup_date"
-    t.string "dropoff_date"
-    t.string "pickup_time"
-    t.string "dropoff_time"
-    t.string "weight"
-    t.string "rate"
-    t.boolean "delivered"
-    t.integer "driver_id"
-    t.integer "truck_id"
-  end
-
-  create_table "trucks", force: :cascade do |t|
-    t.string "truck_model"
-    t.string "truck_color"
-    t.string "license_plate"
-    t.string "mileage"
-    t.string "vin_number"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
