@@ -8,16 +8,32 @@
 
 ### Deployment:
 
+ADD
 
 # Freight Management
 This application consists of a web API built with Sinatra and Active Record in connection with a React frontend.
 
+# Getting Started
+Follow the steps below to set up both front-end and back-end code.
 
+## freight-company-client directory
+
+Start development server
+$ npm start
+
+## freight-company-server directory
+
+Execute database table migrations
+$ bundle exec rake db:migrate
+
+Run server
+$ bundle exec rake server
 
 # Usage
 
 ## Front-end
 On the client side (from root directory './freight-management-client'), the application allows you to add, remove and manage data of a freight company, persisting the changes to the server without having to refresh the page.
+
 
 ## Back-end
 On the server side (from root directory './freight-management-server'), you can decide to start the application without data, running only the migrations to create the database tables:
