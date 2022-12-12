@@ -7,6 +7,5 @@ class Truck < ActiveRecord::Base
       load.truck_id == self.id
     end
   end
-
-
+  
 end

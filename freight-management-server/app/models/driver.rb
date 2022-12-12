@@ -19,5 +19,5 @@ class Driver < ActiveRecord::Base
   def driver_trucks
     self.trucks
   end
-
+  
 end
