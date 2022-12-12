@@ -18,16 +18,23 @@ Follow the steps below to set up both front-end and back-end code.
 
 ## freight-company-client directory
 
-Start development server  
-$ npm start
+- Start development server  
+ ```bash
+  $ npm start
+  ```
 
 ## freight-company-server directory
 
-Execute database table migrations  
-$ bundle exec rake db:migrate
+- Execute database table migrations  
 
-Run server  
-$ bundle exec rake server
+ ```bash
+  $ bundle exec rake db:migrate
+  ```
+
+- Run server
+ ```bash
+  $ bundle exec rake server
+  ```
 
 # Usage
 
@@ -38,11 +45,15 @@ On the client side (from root directory './freight-management-client'), the appl
 ## Back-end
 On the server side (from root directory './freight-management-server'), you can decide to start the application without data, running only the migrations to create the database tables:
 
-$ bundle exec rake db:migrate
+ ```bash
+  $ bundle exec rake db:migrate
+  ```
 
 In case you wish to migrate the tables with some sample data, just run the following command:
 
-$ bundle exec rake db:migrate db:seed
+ ```bash
+  $ bundle exec rake db:migrate db:seed
+  ```
 
 The database tables communicate with eachother through a one-to-many table association relationship, represented below:
 
