@@ -18,15 +18,15 @@ Follow the steps below to set up both front-end and back-end code.
 
 ## freight-company-client directory
 
-Start development server
+Start development server  
 $ npm start
 
 ## freight-company-server directory
 
-Execute database table migrations
+Execute database table migrations  
 $ bundle exec rake db:migrate
 
-Run server
+Run server  
 $ bundle exec rake server
 
 # Usage
