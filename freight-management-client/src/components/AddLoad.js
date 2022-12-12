@@ -17,7 +17,6 @@ function AddLoad({ addLoad, drivers, trucks }) {
   const [checkLoad, setCheckLoad] = useState("")
 
   const handleChange = (e) => {
-    console.log(e.target.type)
     setFormData({
       ...formData,
       [e.target.name]: e.target.type === 'number' ? parseInt(e.target.value) : e.target.value
@@ -35,7 +34,6 @@ function AddLoad({ addLoad, drivers, trucks }) {
     })
     .then(resp => resp.json())
     .then(newLoad => {
-      console.log(newLoad)
       setFormData({
         pickup_address: "",
         dropoff_address: "",

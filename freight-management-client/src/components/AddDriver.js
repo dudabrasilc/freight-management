@@ -30,7 +30,6 @@ function AddDriver({ addDriver }) {
     })
     .then(resp => resp.json())
     .then(newDriver => {
-      console.log(newDriver)
       setFormData({
         name: "",
         age: "",

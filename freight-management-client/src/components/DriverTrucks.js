@@ -1,5 +1,4 @@
 function DriverTrucks({ driverTrucks }) {
-  console.log(driverTrucks)
 
   const trucksList = driverTrucks.map(truck => {
     return (

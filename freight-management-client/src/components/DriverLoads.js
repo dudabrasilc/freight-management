@@ -1,5 +1,5 @@
 function DriverLoads({ driverLoads }) {
-
+  
   const loadsList = driverLoads.map(load => {
     return (
       <li key={load.id}>

@@ -27,9 +27,8 @@ function Load({ load, deleteLoad, handleDelivered, drivers, trucks }) {
   })
     .then((r) => r.json())
     .then((updated) => {
-      console.log(updated)
       handleDelivered(updated)
-    });
+    })
   }
 
   const matchedDriver = drivers.filter(driver => {
@@ -53,9 +52,11 @@ function Load({ load, deleteLoad, handleDelivered, drivers, trucks }) {
       <p><b>‣ Dropoff Time: </b> {load.dropoff_time}</p>
       <p><b>‣ Weight:</b> {load.weight}</p>
       <p><b>‣ Rate: </b> {load.rate}</p>
-      <p><b>‣ Driver: </b> <Link to={`Drivers/${load.driver_id}`}>
-        {matchedDriver[0].name}
-      </Link></p>
+      <p><b>‣ Driver: </b>
+        <Link to={`Drivers/${load.driver_id}`}>
+          {matchedDriver[0].name}
+        </Link>
+      </p>
       <p><b>‣ Truck: </b> {matchedTruck[0].truck_color} {matchedTruck[0].truck_model}</p>
       <button className="button medium regular white" onClick={handleDelete}>Remove Load</button>
       <hr></hr>

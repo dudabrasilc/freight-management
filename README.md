@@ -53,7 +53,7 @@ The database tables communicate with eachother through a one-to-many table assoc
 
 
 # Navigating
-To navigate through the application, you will be using a navbar.
+To navigate through the application, you will be using the navbar.
 
 ## Loads tab
 If you navigate to the Loads tab on the navbar, you will have displayed a list of all loads. Each load has its own attributes and you can interact to mark it as delivered or not.
