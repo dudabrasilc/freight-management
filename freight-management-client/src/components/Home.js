@@ -1,6 +1,3 @@
-// ADD INTRODUCTION ON P TAG AND STYLE HOME PAGE
-
-
 function Home() {
   return (
     <div className="content">

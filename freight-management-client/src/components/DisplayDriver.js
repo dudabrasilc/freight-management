@@ -11,7 +11,6 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
   const matched = drivers.filter(driver => {
     return Number(params.id) === driver.id
   })
-  console.log(matched)
 
   const match = useRouteMatch()
 
@@ -57,7 +56,6 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
     return (
       <div className="display">
         <img className="image-display" src={matched[0].img_url} alt="image" />
-
         <h2>{matched[0].name}</h2>
         <p>Age: {matched[0].age}</p>
         <p>Years of Experience: {matched[0].years_of_experience}</p>
@@ -65,13 +63,13 @@ function DisplayDriver({ drivers, onUpdateDriver }) {
         <p>Driver's License Class: {matched[0].dl_class}</p>
         <hr></hr>
         <div>
-            <input type="submit" className="button medium regular white" value={showResults ? "Hide Loads" : "Display loads" } onClick={handleShow} />
-            { showResults ? <DriverLoads driverLoads={driverLoads}/> : null }
+          <input type="submit" className="button medium regular white" value={showResults ? "Hide Loads" : "Display loads" } onClick={handleShow} />
+          { showResults ? <DriverLoads driverLoads={driverLoads}/> : null }
         </div>
         <hr></hr>
         <div>
-            <input type="submit" className="button medium regular white" value={showTrucks ? "Hide Trucks" : "Display Trucks" } onClick={handleShowTrucks} />
-            { showTrucks ? <DriverTrucks driverTrucks={driverTrucks}/> : null }
+          <input type="submit" className="button medium regular white" value={showTrucks ? "Hide Trucks" : "Display Trucks" } onClick={handleShowTrucks} />
+          { showTrucks ? <DriverTrucks driverTrucks={driverTrucks}/> : null }
         </div>
       </div>
     )

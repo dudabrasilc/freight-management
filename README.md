@@ -9,36 +9,32 @@
 ### Deployment:
 
 
-
-
 # Freight Management
-This application consists of a front-end in connection with back-end
-
-## File Structure
+This application consists of a web API built with Sinatra and Active Record in connection with a React frontend.
 
 
-## Usage
 
-### Front-End
-Install dependencies:
-$ npm install
+# Usage
 
-Start development server:
-$ npm start
+## Front-end
+On the client side (from root directory './freight-management-client'), the application allows you to add, remove and manage data of a freight company.
 
-### Back-End
-Install gems from Gemfile:
-$ bundle install
+## Back-end
+On the server side (from root directory './freight-management-server'), you can decide to start the application without data, running only the migrations to create the database tables:
 
-Run Rake migrations and seed database tables:
+$ bundle exec rake db:migrate
+
+In case you wish to migrate the tables with some sample data, just run the following command:
+
 $ bundle exec rake db:migrate db:seed
 
-Add image samples to drivers table:
-$ bundle exec rake console
-$ Driver.add_img
+The database tables communicate with eachother through a one-to-many table association relationship, represented below:
 
-Run server:
-$ bundle exec rake server
+<img alt="table-association" src='./readme-files/table-association.png' />
+
+# File Structure
+
+
 
 ### Navigating
 

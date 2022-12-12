@@ -1,12 +1,7 @@
 import { Link } from 'react-router-dom';
 import DriverCard from "./DriverCard";
 
-function DriversList({ drivers, setDrivers }) {
-
-  function handleRemoveDriver(removedDriver) {
-    const updatedDriversList = drivers.filter((driver) => driver.id !== removedDriver.id);
-    setDrivers(updatedDriversList);
-  }
+function DriversList({ drivers }) {
 
   const driversArray = drivers.map(driver => {
     return (
@@ -21,7 +16,7 @@ function DriversList({ drivers, setDrivers }) {
   return (
     <>
       <br></br>
-      <h2 className="header-list">For more information about a driver and to check the driver's loads/trucks, click on the avatar.</h2>
+      <h2 className="header-list">For more information about a driver and to check the driver's loads and trucks, click on the avatar.</h2>
       <div className='cards'>
         {driversArray}
       </div>

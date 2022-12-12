@@ -1,9 +1,6 @@
-import { useRouteMatch, useParams } from 'react-router-dom'
 import Truck from './Truck';
 
 function TrucksPage({ trucks }) {
-  const match = useRouteMatch()
-  const params = useParams()
 
   const trucksList = trucks.map(truck => {
     return (
