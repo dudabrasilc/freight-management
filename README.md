@@ -17,7 +17,7 @@ This application consists of a web API built with Sinatra and Active Record in c
 # Usage
 
 ## Front-end
-On the client side (from root directory './freight-management-client'), the application allows you to add, remove and manage data of a freight company.
+On the client side (from root directory './freight-management-client'), the application allows you to add, remove and manage data of a freight company, persisting the changes to the server without having to refresh the page.
 
 ## Back-end
 On the server side (from root directory './freight-management-server'), you can decide to start the application without data, running only the migrations to create the database tables:
@@ -36,9 +36,18 @@ The database tables communicate with eachother through a one-to-many table assoc
 
 
 
-### Navigating
+# Navigating
+To navigate through the application, you will be using a navbar.
 
+## Loads tab
+If you navigate to the Loads tab on the navbar, you will have displayed a list of all loads. Each load has its own attributes and you can interact to mark it as delivered or not.
+Also, you can click on the name of a load's driver to be redirected to the driver's page, where you will be able to check a driver's current loads and trucks.
 
+![](./readme-files/loads-page.gif)
+
+## Trucks and Drivers tabs
+
+## New tab
 
 ### Contribute
 
