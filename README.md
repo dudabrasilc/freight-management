@@ -9,6 +9,9 @@
 # Freight Management
 This application consists of a web API built with Sinatra and Active Record in connection with a React frontend.
 
+## Walk-trhough video
+https://www.youtube.com/watch?v=_6VdUPoxXLo
+
 # File Structure
 
 <img alt='file-structure' src='./readme-files/file-structure.png' />  
