@@ -28,10 +28,10 @@ Follow the steps below to set up both front-end and back-end code.
 
 ## freight-company-server directory
 
-- Execute database table migrations  
+- Execute database table migrations and seeding
 
  ```bash
-  $ bundle exec rake db:migrate
+  $ bundle exec rake db:migrate db:seed
   ```
 
 - Run server
