@@ -76,7 +76,6 @@ The trucks and drivers sections display a list of trucks and drivers. The driver
 
 ![](./readme-files/trucks-drivers.gif)
 
-
 ## New tab
 On the new tab you have a dropdown list options that takes you to different forms to add a load, driver or a truck.
 
