@@ -7,6 +7,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/Drivers/:id" do
+    # bind.pry
     driver = Driver.find(params[:id])
     driver.to_json
   end

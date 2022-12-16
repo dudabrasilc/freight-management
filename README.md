@@ -52,10 +52,22 @@ On the server side (from root directory './freight-management-server'), you can 
   $ bundle exec rake db:migrate
   ```
 
-In case you wish to migrate the tables with some sample data, just run the following command:
+In case you want to migrate the tables with some sample data, just run the following command:
 
  ```bash
   $ bundle exec rake db:migrate db:seed
+  ```
+
+In the Driver class, there's also a specified method to seed the img_url column of the drivers table with some sample pictures. You can do it using the command:
+
+ ```bash
+  $ bundle exec rake console
+  ```
+
+This will run the console Rake task and open a pry session where you can execute the method on the Driver's class, with the following command:
+
+ ```bash
+[1] pry(main)> Driver.add_img 
   ```
 
 The database tables communicate with eachother through a one-to-many table association relationship, represented below:
