@@ -72,9 +72,10 @@ This will run the console Rake task and open a pry session where you can execute
 
 # Database tables
 
-The database tables communicate with eachother through a one-to-many table association relationship, represented below:
+The database tables communicate with eachother through a many-to-many table association relationship, represented below on the ERD(Entity Relationship Diagram):
 
 <img alt="table-association" src='./readme-files/table-association.png' />  
+
 
 # Navigating
 To navigate through the application, you will be using the navbar.
