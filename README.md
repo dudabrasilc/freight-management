@@ -74,7 +74,7 @@ This will run the console Rake task and open a pry session where you can execute
 
 The database tables communicate with eachother through a many-to-many table association relationship, represented below on the ERD(Entity Relationship Diagram):
 
-<img alt="table-association" src='./readme-files/table-association.png' />  
+<img alt="table-association" src='./readme-files/many-to-many.png' />  
 
 
 # Navigating
