@@ -70,6 +70,8 @@ This will run the console Rake task and open a pry session where you can execute
 [1] pry(main)> Driver.add_img 
   ```
 
+# Database tables
+
 The database tables communicate with eachother through a one-to-many table association relationship, represented below:
 
 <img alt="table-association" src='./readme-files/table-association.png' />  
