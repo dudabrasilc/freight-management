@@ -58,7 +58,7 @@ function App() {
 
   function deleteLoad(id) {
     let updatedLoadList = loads.filter(load => {
-      return load.id != id
+      return load.id !== id
     })
     setLoads(updatedLoadList)
   }
@@ -101,7 +101,7 @@ function App() {
           <NavLink activeClassName="active" exact to="/AddDriver">Driver</NavLink>
         </div>
       </div>
-      <a className="icon" onClick={toggle}></a>
+      <a className="icon" onClick={toggle}> </a>
     </div>
         <Switch>
           <Route exact path="/">

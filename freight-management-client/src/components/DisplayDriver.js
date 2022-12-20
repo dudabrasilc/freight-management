@@ -5,7 +5,7 @@ import DriverLoads from './DriverLoads';
 import DriverTrucks from './DriverTrucks';
 
 
-function DisplayDriver({ drivers, onUpdateDriver }) {
+function DisplayDriver({ drivers }) {
 
   const params = useParams()
   const matched = drivers.filter(driver => {
