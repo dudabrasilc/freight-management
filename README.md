@@ -51,7 +51,7 @@ bundle install
 - Run server
 
  ```bash
-  $ bundle exec rake server
+bundle exec rake server
   ```
 
 ## freight-company-client directory
