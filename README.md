@@ -9,10 +9,10 @@
 # Freight Management
 This application is a freight management where you have multiple functionality, persisting data from the front end with React to a back end API server built with Sinatra. With the Freight Management app you are able to persist to database the following features:
 
-• Add a driver, truck and load;
-• Assign a driver and a truck to a new load before adding it to the database;
-• Remove a load;
-• Mark a load as delivered.
+• Add a driver, truck and load;  
+• Assign a driver and a truck to a new load before adding it to the database;  
+• Remove a load;  
+• Mark a load as delivered.  
 
 ## Walk-through video
 https://www.youtube.com/watch?v=_6VdUPoxXLo
